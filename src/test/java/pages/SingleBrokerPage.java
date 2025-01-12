@@ -19,8 +19,6 @@ public class SingleBrokerPage extends BasePage {
     @FindBy(xpath = "(//*[contains(@class, 'MuiLink-underlineNone mui-style-1ktzac6')])[2]")
     private WebElement secondPhoneNumber;
 
-    @FindBy(xpath = "//button[.='Clear']")
-    private WebElement clearBtn;
 
     public boolean isAddressDisplayed(){
         WaitUtils.waitUntilElmIsVisible(address);
@@ -42,7 +40,5 @@ public class SingleBrokerPage extends BasePage {
         return secondPhoneNumber.isDisplayed();
     }
 
-    public void clickClearBtn(){
-        clearBtn.click();
-    }
+
 }

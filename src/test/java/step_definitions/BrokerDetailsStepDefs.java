@@ -41,10 +41,11 @@ public class BrokerDetailsStepDefs {
             assertTrue(singleBrokerPage.isAddressDisplayed());
             assertTrue(singleBrokerPage.isFirstNumberDisplayed());
 
+            //There are brokers with just one phone number so that's why the use of try/catch block
             try{
                 assertTrue(singleBrokerPage.isSecondNumberDisplayed());
             }catch (Exception e){
-                e.printStackTrace();
+                System.out.println( str + " has only one phone number");
             }
 
             driver.navigate().back();
